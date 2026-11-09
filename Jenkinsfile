@@ -40,5 +40,8 @@ pipeline {
         always{
             junit 'test-results/junit.xml'
         }
+         success {
+        archiveArtifacts artifacts: 'build/**'
+        }
     }
 }
